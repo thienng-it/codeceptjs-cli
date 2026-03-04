@@ -128,3 +128,8 @@ ccjs run workers
 
 - [Configuration](/guide/configuration) — Page objects, custom helpers, and project structure
 - [All Commands](/commands/init) — Explore every CLI command in detail
+- [CodeceptJS Documentation](https://codecept.io/basics/) — Learn the full power of the testing framework
+
+::: info About this project
+`codeceptjs-cli` is a free, open-source community tool built on top of [CodeceptJS](https://codecept.io/). It is not officially affiliated with the CodeceptJS team — all credit for the core framework belongs to them. Contributions are welcome!
+:::

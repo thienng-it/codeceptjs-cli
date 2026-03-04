@@ -48,6 +48,7 @@ export default defineConfig({
           { text: 'ccjs generate', link: '/commands/generate' },
         ],
       },
+      { text: 'CodeceptJS ↗', link: 'https://codecept.io/' },
     ],
 
     sidebar: {
@@ -100,8 +101,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2026 codeceptjs-cli contributors',
+      message: 'Released under the <a href="https://opensource.org/licenses/MIT">MIT License</a>. Built with ❤️ on top of <a href="https://codecept.io/">CodeceptJS</a>.',
+      copyright: 'This is a community-driven open-source project — not officially affiliated with the CodeceptJS team.<br>CodeceptJS is created and maintained by <a href="https://github.com/codeceptjs/CodeceptJS">@codeceptjs</a>. All credit for the testing framework belongs to them.',
     },
 
     editLink: {

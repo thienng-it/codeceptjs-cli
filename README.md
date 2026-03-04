@@ -84,6 +84,33 @@ User types: ccjs run --steps
 
 ---
 
+## Acknowledgements
+
+This project is built on top of the incredible [**CodeceptJS**](https://codecept.io/) testing framework. All credit for the core testing engine, helpers, and plugin ecosystem belongs to the [CodeceptJS team](https://github.com/codeceptjs/CodeceptJS).
+
+`codeceptjs-cli` is a **community-driven open-source tool** — it is **not** officially affiliated with or endorsed by the CodeceptJS project. We simply love CodeceptJS and want to make the developer experience even better.
+
+- 🌐 [CodeceptJS Official Site](https://codecept.io/)
+- 📖 [CodeceptJS Documentation](https://codecept.io/basics/)
+- ⭐ [Star CodeceptJS on GitHub](https://github.com/codeceptjs/CodeceptJS)
+
+---
+
+## Contributing
+
+This project is **free and open source** under the [MIT License](LICENSE) — everyone is welcome to use, share, and contribute!
+
+We'd love your help, whether it's:
+
+- 🐛 Reporting bugs via [Issues](https://github.com/thienng-it/codeceptjs-cli/issues)
+- 💡 Suggesting features or improvements
+- 📖 Improving documentation
+- 🔧 Submitting pull requests
+
+See the [Contributing Guide](CONTRIBUTING.md) for details on how to get started.
+
+---
+
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE) for details.

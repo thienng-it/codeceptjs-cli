@@ -89,4 +89,23 @@ ccjs doctor
 ccjs run --steps
 ```
 
+## Powered by CodeceptJS
+
+This CLI is built on top of the amazing [CodeceptJS](https://codecept.io/) testing framework created and maintained by the [CodeceptJS team](https://github.com/codeceptjs/CodeceptJS). All credit for the core testing engine, helpers, and plugin ecosystem belongs to them.
+
+`codeceptjs-cli` is a **community-driven open-source wrapper** — it is **not** officially affiliated with or endorsed by the CodeceptJS project. We simply love CodeceptJS and want to make the developer experience even better.
+
+- 🌐 [CodeceptJS Official Site](https://codecept.io/)
+- 📖 [CodeceptJS Documentation](https://codecept.io/basics/)
+- ⭐ [Star CodeceptJS on GitHub](https://github.com/codeceptjs/CodeceptJS)
+
+## Contributing
+
+This project is **free and open source** — everyone is welcome to use, share, and contribute! Whether it's fixing a bug, improving docs, or adding a new feature, your contributions are appreciated.
+
+- 📜 Licensed under [MIT](https://github.com/thienng-it/codeceptjs-cli/blob/main/LICENSE)
+- 🐛 [Report an Issue](https://github.com/thienng-it/codeceptjs-cli/issues)
+- 💡 [Open a Pull Request](https://github.com/thienng-it/codeceptjs-cli/pulls)
+- 📖 [Contributing Guide](https://github.com/thienng-it/codeceptjs-cli/blob/main/CONTRIBUTING.md)
+
 </div>
