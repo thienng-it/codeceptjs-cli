@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#7c3aed"/>
+  <text x="64" y="58" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-weight="700" font-size="28" fill="#fff" letter-spacing="-0.5">ccjs</text>
+  <text x="64" y="82" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-weight="400" font-size="13" fill="rgba(255,255,255,0.75)">CLI</text>
+  <rect x="26" y="96" width="76" height="3" rx="1.5" fill="rgba(255,255,255,0.3)"/>
+  <rect x="26" y="96" width="42" height="3" rx="1.5" fill="#a78bfa"/>
+</svg>

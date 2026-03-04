@@ -19,7 +19,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: 'https://codecept.io/img/logo.svg',
+    logo: '/logo.svg',
 
     siteTitle: 'codeceptjs-cli',
 

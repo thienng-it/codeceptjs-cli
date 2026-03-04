@@ -6,8 +6,8 @@ hero:
   text: The Next-Gen CLI for CodeceptJS
   tagline: A production-grade command-line tool for maximum developer productivity, extensibility, and CI/CD ergonomics.
   image:
-    src: https://codecept.io/img/logo.svg
-    alt: CodeceptJS Logo
+    src: /logo.svg
+    alt: codeceptjs-cli Logo
   actions:
     - theme: brand
       text: Get Started →
