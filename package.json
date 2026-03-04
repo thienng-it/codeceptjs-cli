@@ -13,6 +13,7 @@
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5",
     "chalk": "^5.4.1",
+    "change-case": "^5.4.4",
     "cli-table3": "^0.6.5",
     "execa": "^9.5.2",
     "figures": "^6.1.0",
