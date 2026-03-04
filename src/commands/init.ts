@@ -2,7 +2,7 @@ import * as p from '@clack/prompts'
 import { Command, Flags } from '@oclif/core'
 import chalk from 'chalk'
 import { execa } from 'execa'
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { basename, join } from 'node:path'
 import ora from 'ora'
 
@@ -166,7 +166,9 @@ export default class Init extends Command {
 
     // Generate package.json if it doesn't exist
     const pkgJsonPath = join(process.cwd(), 'package.json')
-    if (!existsSync(pkgJsonPath)) {
+    if (existsSync(pkgJsonPath)) {
+      p.log.info(`${chalk.dim('package.json already exists — skipping')}`)
+    } else {
       const pkgContent = renderTemplate('package.json', {
         helper: answers.helper,
         projectName: basename(process.cwd()),
@@ -174,8 +176,6 @@ export default class Init extends Command {
       })
       writeFileSync(pkgJsonPath, pkgContent, 'utf8')
       p.log.success(`Created ${chalk.green('package.json')}`)
-    } else {
-      p.log.info(`${chalk.dim('package.json already exists — skipping')}`)
     }
 
     // Install dependencies
