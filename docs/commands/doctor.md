@@ -1,6 +1,6 @@
-# Environment Doctor
+# ccjs doctor
 
-The `ccjs doctor` command validates your testing environment to catch configuration and installation errors early.
+Comprehensive environment health check for your CodeceptJS project.
 
 ## Usage
 
@@ -8,15 +8,18 @@ The `ccjs doctor` command validates your testing environment to catch configurat
 ccjs doctor
 ```
 
-It validates:
+## What It Checks
 
-- Node.js version (Requires 22+)
-- CodeceptJS module installation
-- Config file presence
-- Test directory presence
-- Output directory presence
+| Check | What It Validates |
+| --- | --- |
+| **Node.js version** | Requires Node.js ≥ 22 |
+| **CodeceptJS** | Module is installed and accessible |
+| **Config file** | `codecept.conf.{ts,js,mjs,cjs}` exists |
+| **Test directory** | Configured test directory is present |
+| **Output directory** | Screenshot/report output directory exists |
+| **Platform** | Displays OS and architecture info |
 
-Example Output:
+## Example Output
 
 ```text
 ┌───┬──────────────────┬─────────────────────┐
@@ -29,4 +32,16 @@ Example Output:
 │ ✓ │ Output directory │ ./output            │
 │ ✓ │ Platform         │ darwin arm64        │
 └───┴──────────────────┴─────────────────────┘
+  ✔ All checks passed!
 ```
+
+## When to Use
+
+- **After `ccjs init`** — verify everything was scaffolded correctly
+- **In CI pipelines** — as a pre-flight check before running tests
+- **When debugging** — quickly identify missing dependencies or misconfigurations
+- **After upgrading** — confirm compatibility after Node.js or CodeceptJS updates
+
+::: tip
+Run `ccjs doctor` as the first step whenever tests aren't working as expected.
+:::

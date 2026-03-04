@@ -1,30 +1,42 @@
 # Getting Started
 
+Get up and running with `codeceptjs-cli` in under 5 minutes.
+
 ## Prerequisites
 
-| Requirement | Version                 |
-| ----------- | ----------------------- |
-| Node.js     | ≥ 22                    |
-| npm         | ≥ 10                    |
-| codeceptjs  | ≥ 3.6 (peer dependency) |
+| Requirement | Version                 | Why |
+| ----------- | ----------------------- | --- |
+| Node.js     | ≥ 22                    | Runtime — uses modern ESM features |
+| npm         | ≥ 10                    | Package manager (ships with Node 22) |
+| CodeceptJS  | ≥ 3.6 (peer dependency) | The test framework this CLI wraps |
 
-Install CodeceptJS and a browser engine in your project:
+::: tip
+Run `ccjs doctor` at any time to verify all prerequisites are met.
+:::
 
-```bash
-npm install codeceptjs @codeceptjs/configure playwright --save-dev
-```
-
-## 1. Install & Initialize
+## Installation
 
 ```bash
-# Install globally
+# Install the CLI globally
 npm install -g codeceptjs-cli
 
-# Initialize a new project
+# Verify installation
+ccjs --version
+```
+
+Or use it without installing via `npx`:
+
+```bash
+npx codeceptjs-cli --help
+```
+
+## Step 1 — Initialize a Project
+
+```bash
 ccjs init
 ```
 
-The interactive wizard walks you through:
+The interactive wizard walks you through the full setup:
 
 ```text
 ┌  CodeceptJS CLI — Project Setup
@@ -48,7 +60,7 @@ The interactive wizard walks you through:
 └  ✔ Project scaffolded!
 ```
 
-**Non-interactive mode** (for CI):
+**Non-interactive mode** (great for CI):
 
 ```bash
 ccjs init --yes --helper Playwright --test-dir ./e2e
@@ -63,7 +75,7 @@ ccjs init --yes --helper Playwright --test-dir ./e2e
 | `steps.d.ts`          | TypeScript autocompletion for the `I` object |
 | `output/`             | Directory for screenshots and reports        |
 
-## 2. Verify Environment
+## Step 2 — Verify Your Environment
 
 ```bash
 ccjs doctor
@@ -83,12 +95,12 @@ ccjs doctor
   ✔ All checks passed!
 ```
 
-## 3. Write Tests
+## Step 3 — Write Your First Test
 
 ```typescript
-Feature('Feature Name')
+Feature('Login')
 
-Scenario('test description', ({ I }) => {
+Scenario('user can sign in', ({ I }) => {
   I.amOnPage('/')
   I.see('Welcome')
   I.click('Sign In')
@@ -99,4 +111,20 @@ Scenario('test description', ({ I }) => {
 })
 ```
 
-See the [Commands](/commands/init) section for more tools!
+## Step 4 — Run Tests
+
+```bash
+# Run all tests with step output
+ccjs run --steps
+
+# Run a specific test file
+ccjs run tests/login.test.ts
+
+# Run in parallel
+ccjs run workers
+```
+
+## What's Next?
+
+- [Configuration](/guide/configuration) — Page objects, custom helpers, and project structure
+- [All Commands](/commands/init) — Explore every CLI command in detail

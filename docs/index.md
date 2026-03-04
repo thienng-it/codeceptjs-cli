@@ -1,43 +1,92 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: 'codeceptjs-cli'
-  text: 'The Next-Gen Wrapper for CodeceptJS'
-  tagline: 'A production-grade CLI for maximum developer productivity, extensibility, and CI/CD ergonomics.'
+  name: codeceptjs-cli
+  text: The Next-Gen CLI for CodeceptJS
+  tagline: A production-grade command-line tool for maximum developer productivity, extensibility, and CI/CD ergonomics.
   image:
     src: https://codecept.io/img/logo.svg
     alt: CodeceptJS Logo
   actions:
     - theme: brand
-      text: Get Started
+      text: Get Started →
       link: /guide/getting-started
     - theme: alt
       text: View Commands
       link: /commands/init
+    - theme: alt
+      text: GitHub
+      link: https://github.com/thienng-it/codeceptjs-cli
 
 features:
-  - title: interactive setup
-    details: '<code>ccjs init</code> scaffolding wizard for Playwright, WebDriver, Appium, and TestCafe.'
-  - title: smart runner
-    details: 'Colorized and streaming wrapper for <code>codeceptjs run</code> with automatic parallel worker detection.'
-  - title: environment doctor
-    details: '<code>ccjs doctor</code> performs comprehensive environment health checks for Node, browsers, and config files.'
-  - title: built for speed
-    details: 'Bundled natively for sub-50ms cold starts on Node.js 22 LTS with full TypeScript support.'
+  - icon: 🧙
+    title: Interactive Setup
+    details: "Run <code>ccjs init</code> to scaffold a complete CodeceptJS project with an interactive wizard — Playwright, WebDriver, Appium, and more."
+    link: /commands/init
+    linkText: Learn more
+  - icon: ⚡
+    title: Smart Test Runner
+    details: "Colorized, streaming test output with <code>ccjs run</code>. Automatic parallel worker detection. Pass-through to all CodeceptJS flags."
+    link: /commands/run
+    linkText: Learn more
+  - icon: 🩺
+    title: Environment Doctor
+    details: "<code>ccjs doctor</code> validates Node.js, CodeceptJS, browsers, and config files in one command — catch problems before your tests do."
+    link: /commands/doctor
+    linkText: Learn more
+  - icon: 🚀
+    title: Built for Speed
+    details: "Bundled natively with tsup for sub-50ms cold starts on Node.js 22 LTS. Full TypeScript support out of the box."
+  - icon: 👷
+    title: Parallel Workers
+    details: "<code>ccjs run workers</code> auto-detects CPU cores and distributes tests across parallel workers for dramatically faster CI pipelines."
+    link: /commands/workers
+    linkText: Learn more
+  - icon: 🔧
+    title: Code Generators
+    details: "Scaffold tests, page objects, and custom helpers with interactive prompts. No more copy-pasting boilerplate."
+    link: /commands/generate
+    linkText: Learn more
 ---
 
-## Why `codeceptjs-cli`?
+<div class="vp-doc" style="max-width: 688px; margin: 2rem auto; padding: 0 24px;">
 
-**cscodeceptjs-cli** (`ccjs`) provides a **better command-line experience** for CodeceptJS — similar to how `create-react-app` wraps Webpack to make React projects easier.
+## Why codeceptjs-cli?
+
+**codeceptjs-cli** (`ccjs`) provides a **better command-line experience** for CodeceptJS — similar to how `create-react-app` wraps Webpack to make React projects easier.
 
 ### The Problem It Solves
 
-| Raw CodeceptJS                     | With `ccjs`                             |
-| ---------------------------------- | --------------------------------------- |
-| Manually create `codecept.conf.js` | `ccjs init` → interactive wizard        |
-| Hope your environment is correct   | `ccjs doctor` → validates everything    |
-| `npx codeceptjs run --steps`       | `ccjs run --steps` (shorter, colorized) |
-| Figure out worker count yourself   | `ccjs run workers` (auto-detects CPUs)  |
-| `npx codeceptjs generate:test`     | `ccjs generate test` (with prompts)     |
+| Without `ccjs` | With `ccjs` |
+| --- | --- |
+| Manually create `codecept.conf.js` | `ccjs init` → interactive wizard |
+| Hope your environment is correct | `ccjs doctor` → validates everything |
+| `npx codeceptjs run --steps` | `ccjs run --steps` (shorter, colorized) |
+| Figure out worker count yourself | `ccjs run workers` (auto-detects CPUs) |
+| `npx codeceptjs generate:test` | `ccjs generate test` (with prompts) |
+
+### Quick Install
+
+```bash
+# Install globally
+npm install -g codeceptjs-cli
+
+# Or use npx
+npx codeceptjs-cli init
+```
+
+### Quick Start
+
+```bash
+# 1. Initialize a project
+ccjs init
+
+# 2. Check your environment
+ccjs doctor
+
+# 3. Run your tests
+ccjs run --steps
+```
+
+</div>

@@ -1,6 +1,42 @@
-# Project Configuration
+# Configuration
 
-The configuration for your project is typically found in `codecept.conf.ts` (or `.js`).
+Learn how to configure your CodeceptJS project and extend it with page objects and custom helpers.
+
+## Config File
+
+The CLI discovers your config file automatically by looking for:
+
+1. `codecept.conf.ts` (recommended)
+2. `codecept.conf.js`
+3. `codecept.conf.mjs`
+4. `codecept.conf.cjs`
+
+::: tip
+You never need to specify the config path manually — `ccjs` finds it for you.
+:::
+
+## Basic Structure
+
+```typescript
+// codecept.conf.ts
+export const config: CodeceptJS.MainConfig = {
+  tests: './tests/**/*.test.ts',
+  output: './output',
+  helpers: {
+    Playwright: {
+      browser: 'chromium',
+      url: 'http://localhost:3000',
+      show: false,
+    },
+  },
+  plugins: {
+    screenshotOnFail: { enabled: true },
+    retryFailedStep: { enabled: true },
+  },
+  include: {},
+  name: 'my-project',
+}
+```
 
 ## Page Objects
 
@@ -45,7 +81,9 @@ Scenario('login via page object', ({ I, loginPage }) => {
 })
 ```
 
----
+::: info Generate page objects
+Use `ccjs generate pageobject` to scaffold page objects interactively.
+:::
 
 ## Custom Helpers
 
@@ -81,3 +119,27 @@ helpers: {
   ApiHelper: { require: './helpers/ApiHelper.ts' },
 },
 ```
+
+::: info Generate helpers
+Use `ccjs generate helper` to scaffold helpers interactively.
+:::
+
+## CI Configuration
+
+For CI environments, use non-interactive mode:
+
+```bash
+# Initialize without prompts
+ccjs init --yes --helper Playwright --test-dir ./e2e
+
+# Run tests in parallel for speed
+ccjs run workers --count 4
+```
+
+Recommended CI flags:
+
+| Flag | Purpose |
+| --- | --- |
+| `--steps` | Step-by-step output for debugging |
+| `--grep "@smoke"` | Run only smoke tests |
+| `--override '{"helpers":{"Playwright":{"show":false}}}'` | Headless mode |

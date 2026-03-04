@@ -1,14 +1,28 @@
-# Flaky Test Detection (Rerun)
+# ccjs run rerun
 
-The `ccjs run rerun` command helps identify and deal with flaky tests by running them multiple times.
+Detect and manage flaky tests by running them multiple times.
 
 ## Usage
 
 ```bash
-ccjs run rerun
+ccjs run rerun [options]
 ```
 
-First, configure the retry behavior in `codecept.conf.ts`:
+## How It Works
+
+The `rerun` command executes your test suite multiple times to identify tests that pass inconsistently. This is essential for maintaining test reliability in CI pipelines.
+
+## Flags
+
+| Flag | Short | Description |
+| --- | --- | --- |
+| `--min-success <n>` | | Minimum successful runs required (default: 2) |
+| `--max-reruns <n>` | | Maximum number of attempts (default: 4) |
+| `--config <path>` | `-c` | Specify a custom config file |
+
+## Configuration
+
+Configure rerun behavior in `codecept.conf.ts`:
 
 ```typescript
 rerun: {
@@ -19,8 +33,25 @@ rerun: {
 
 ## Common Strategies
 
-| Use Case             | Configuration                   |
-| -------------------- | ------------------------------- |
-| Find flaky tests     | `minSuccess: 1, maxReruns: 5`   |
-| Confirm stability    | `minSuccess: 3, maxReruns: 5`   |
-| Full stability audit | `minSuccess: 10, maxReruns: 10` |
+| Use Case | Configuration | When to Use |
+| --- | --- | --- |
+| Find flaky tests | `minSuccess: 1, maxReruns: 5` | Initial discovery |
+| Confirm stability | `minSuccess: 3, maxReruns: 5` | Before merging PRs |
+| Full stability audit | `minSuccess: 10, maxReruns: 10` | Before releases |
+
+## Examples
+
+```bash
+# Run with default settings
+ccjs run rerun
+
+# Custom thresholds
+ccjs run rerun --min-success 3 --max-reruns 5
+```
+
+::: tip
+Combine with `--grep` to rerun only specific tests:
+```bash
+ccjs run rerun --grep "@flaky"
+```
+:::
