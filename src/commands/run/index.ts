@@ -2,6 +2,7 @@ import { Command, Flags } from '@oclif/core'
 import chalk from 'chalk'
 import { execa } from 'execa'
 
+import { resolveCodeceptBin } from '../../integrations/codeceptjs.js'
 import { findConfig } from '../../lib/config.js'
 import { CliError, ExitCode } from '../../lib/errors.js'
 import { createLogger } from '../../lib/logger.js'
@@ -93,8 +94,10 @@ export default class Run extends Command {
     log.info(`Running: ${chalk.cyan(`codeceptjs ${args.join(' ')}`)}`)
     log.divider()
 
+    const bin = resolveCodeceptBin()
+
     try {
-      const result = await execa('npx', ['codeceptjs', ...args], {
+      const result = await execa(bin.command, [...bin.args, ...args], {
         cwd: process.cwd(),
         env: {
           ...process.env,
