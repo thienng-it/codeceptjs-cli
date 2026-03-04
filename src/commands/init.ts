@@ -194,7 +194,7 @@ export default class Init extends Command {
 
     // Generate steps.d.ts if TypeScript
     if (answers.typescript) {
-      const stepsContent = renderTemplate('steps.d', {})
+      const stepsContent = renderTemplate('steps.d', { helper: answers.helper })
       writeFileSync(join(process.cwd(), 'steps.d.ts'), stepsContent, 'utf8')
       p.log.success(`Created ${chalk.green('steps.d.ts')}`)
     }

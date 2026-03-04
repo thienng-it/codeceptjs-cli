@@ -36,7 +36,8 @@ describe('templates', () => {
       expect(result).toContain('http://localhost:3000')
       expect(result).toContain('screenshotOnFail')
       expect(result).toContain('retryFailedStep')
-      expect(result).toContain('import { setHeadlessWhen')
+      expect(result).toContain('export const config: CodeceptJS.MainConfig')
+      expect(result).not.toContain('@codeceptjs/configure')
     })
 
     it('should render codecept.conf template with WebDriver (JS)', () => {
@@ -51,7 +52,8 @@ describe('templates', () => {
       })
 
       expect(result).toContain('WebDriver')
-      expect(result).toContain("require('@codeceptjs/configure')")
+      expect(result).toContain('exports.config')
+      expect(result).not.toContain('@codeceptjs/configure')
       expect(result).toContain('http://localhost:8080')
     })
 
@@ -96,6 +98,12 @@ describe('templates', () => {
       const result = renderTemplate('steps.d', {})
       expect(result).toContain("/// <reference types='codeceptjs' />")
       expect(result).toContain('interface Methods extends Playwright')
+    })
+
+    it('should render steps.d template with custom helper', () => {
+      const result = renderTemplate('steps.d', { helper: 'WebDriver' })
+      expect(result).toContain('interface Methods extends WebDriver')
+      expect(result).not.toContain('Playwright')
     })
   })
 })

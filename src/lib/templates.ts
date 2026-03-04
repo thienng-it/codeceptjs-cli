@@ -24,7 +24,6 @@ const templates: Record<string, TemplateFn> = {
       browser: '${browsers[0] ?? 'chromium'}',
       url: '${url}',
       show: !process.env.CI,
-      waitForNavigation: 'networkidle0',
     }`
         : helper === 'WebDriver'
           ? `    WebDriver: {
@@ -42,7 +41,7 @@ const templates: Record<string, TemplateFn> = {
 
     const pluginLines = plugins.map((p) => `    ${p}: { enabled: true },`).join('\n')
 
-    return `${ext === 'ts' ? "import { setHeadlessWhen, setCommonPlugins } from '@codeceptjs/configure';\n\nsetHeadlessWhen(process.env.HEADLESS);\nsetCommonPlugins();\n\nexport const config: CodeceptJS.MainConfig = " : "const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');\n\nsetHeadlessWhen(process.env.HEADLESS);\nsetCommonPlugins();\n\nexports.config = "}{
+    return `${ext === 'ts' ? 'export const config: CodeceptJS.MainConfig = ' : 'exports.config = '}{
   tests: '${testDir}/**/*.test.${ext}',
   output: './output',
   helpers: {
@@ -158,7 +157,8 @@ module.exports = {
 `
   },
 
-  'steps.d'() {
+  'steps.d'(data) {
+    const helper = (data.helper as string) || 'Playwright'
     return `/// <reference types='codeceptjs' />
 
 declare namespace CodeceptJS {
@@ -166,7 +166,7 @@ declare namespace CodeceptJS {
     I: I;
     current: any;
   }
-  interface Methods extends Playwright {}
+  interface Methods extends ${helper} {}
   interface I extends WithTranslation<Methods> {}
   namespace Translation {
     interface Actions {}

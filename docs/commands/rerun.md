@@ -50,8 +50,5 @@ ccjs run rerun --min-success 3 --max-reruns 5
 ```
 
 ::: tip
-Combine with `--grep` to rerun only specific tests:
-```bash
-ccjs run rerun --grep "@flaky"
-```
+The `min-success` and `max-reruns` values can also be configured directly in `codecept.conf.ts` under the `rerun` key, which takes precedence over CLI defaults.
 :::

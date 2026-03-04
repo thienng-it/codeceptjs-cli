@@ -12,16 +12,15 @@ ccjs run [options] [test-files...]
 
 | Flag | Short | Description |
 | --- | --- | --- |
-| `--steps` | | Show step-by-step execution output |
+| `--steps` | `-s` | Show step-by-step execution output |
 | `--debug` | | Run in debug mode (browser stays open on failure) |
-| `--verbose` | | Maximum detail output |
+| `--verbose` | `-v` | Maximum detail output |
 | `--grep <pattern>` | `-g` | Filter tests by name or tag |
 | `--invert` | | Invert grep — exclude matching tests |
 | `--shuffle` | | Randomize test execution order |
+| `--reporter <name>` | `-r` | Mocha reporter to use |
 | `--override <json>` | `-o` | Override config values inline |
 | `--config <path>` | `-c` | Specify a custom config file |
-| `--features` | | Run only feature files |
-| `--tests` | | Run only test files |
 
 ## Examples
 

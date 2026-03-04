@@ -21,10 +21,11 @@ The `dry-run` command parses your test files and displays all features, scenario
 
 | Flag | Short | Description |
 | --- | --- | --- |
-| `--steps` | | Show all steps within each scenario |
-| `--grep <pattern>` | `-g` | Filter tests by name or tag |
+| `--steps` | `-s` | Show all steps within each scenario |
+| `--debug` | | Show debug output |
+| `--bootstrap` | | Enable bootstrap script in dry-run mode |
+| `--plugins <list>` | `-p` | Enable specific plugins (comma-separated) |
 | `--config <path>` | `-c` | Specify a custom config file |
-| `--verbose` | | Maximum detail output |
 
 ## Examples
 
@@ -35,8 +36,11 @@ ccjs dry-run
 # Preview with expanded steps
 ccjs dry-run --steps
 
-# Preview only smoke tests
-ccjs dry-run --grep "@smoke"
+# Preview with debug output
+ccjs dry-run --debug
+
+# Preview with specific plugins enabled
+ccjs dry-run --plugins retryFailedStep,screenshotOnFail
 ```
 
 ::: tip

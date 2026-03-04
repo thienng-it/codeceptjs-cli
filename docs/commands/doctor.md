@@ -8,6 +8,12 @@ Comprehensive environment health check for your CodeceptJS project.
 ccjs doctor
 ```
 
+## Flags
+
+| Flag | Short | Description |
+| --- | --- | --- |
+| `--config <path>` | `-c` | Path to codecept configuration file |
+
 ## What It Checks
 
 | Check | What It Validates |
@@ -26,7 +32,7 @@ ccjs doctor
 │   │ Check            │ Status              │
 ├───┼──────────────────┼─────────────────────┤
 │ ✓ │ Node.js version  │ v22.0.0             │
-│ ✓ │ CodeceptJS       │ v3.6.8              │
+│ ✓ │ CodeceptJS       │ v3.7.5              │
 │ ✓ │ Config file      │ codecept.conf.ts    │
 │ ✓ │ Test directory   │ ./tests             │
 │ ✓ │ Output directory │ ./output            │

@@ -16,10 +16,10 @@ The `workers` command automatically detects the number of available CPU cores an
 
 | Flag | Short | Description |
 | --- | --- | --- |
-| `--count <n>` | `-c` | Number of workers (default: auto-detect CPU count) |
-| `--by <strategy>` | `-b` | Distribution strategy: `pool`, `suite`, or `test` |
+| `--count <n>` | | Number of workers (default: auto-detect CPU count) |
+| `--by <strategy>` | | Distribution strategy: `pool`, `suite`, or `test` |
 | `--grep <pattern>` | `-g` | Filter tests by name or tag |
-| `--override <json>` | `-o` | Override config values inline |
+| `--config <path>` | `-c` | Specify a custom config file |
 
 ## Distribution Strategies
 

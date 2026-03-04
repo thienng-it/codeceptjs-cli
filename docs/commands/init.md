@@ -20,11 +20,12 @@ The `init` command creates a complete CodeceptJS project structure with a single
 
 ## Flags
 
-| Flag | Description |
-| --- | --- |
-| `--yes` | Accept all defaults (non-interactive mode) |
-| `--helper <name>` | Pre-select the testing helper |
-| `--test-dir <path>` | Set the test directory |
+| Flag | Short | Description |
+| --- | --- | --- |
+| `--yes` | `-y` | Accept all defaults (non-interactive mode) |
+| `--helper <name>` | `-h` | Pre-select the testing helper |
+| `--test-dir <path>` | `-d` | Set the test directory (default: `./tests`) |
+| `--typescript` | `-t` | Enable TypeScript for tests (default: `true`) |
 
 ## Examples
 
@@ -47,7 +48,6 @@ ccjs init --yes --helper Playwright --test-dir ./e2e
 | `tests/first.test.ts` | Starter test file |
 | `steps.d.ts` | TypeScript autocompletion definitions |
 | `output/` | Screenshot and report output directory |
-| `tsconfig.json` | TypeScript config (if TS enabled) |
 
 ::: tip
 After running `ccjs init`, use [`ccjs doctor`](/commands/doctor) to verify your environment is set up correctly.
