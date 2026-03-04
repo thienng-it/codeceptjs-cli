@@ -1,7 +1,7 @@
 {
   "name": "codeceptjs-cli",
   "description": "Next-generation production-grade CLI for the CodeceptJS testing framework",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": "thienng-it",
   "bin": {
     "ccjs": "./bin/run.js"
