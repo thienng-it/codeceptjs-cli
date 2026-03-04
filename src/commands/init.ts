@@ -1,8 +1,10 @@
 import * as p from '@clack/prompts'
 import { Command, Flags } from '@oclif/core'
 import chalk from 'chalk'
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { execa } from 'execa'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { basename, join } from 'node:path'
+import ora from 'ora'
 
 import { ensurePlaywrightBrowsers } from '../integrations/playwright.js'
 import { ExitCode } from '../lib/errors.js'
@@ -160,6 +162,32 @@ export default class Init extends Command {
     const outputDir = join(process.cwd(), 'output')
     if (!existsSync(outputDir)) {
       mkdirSync(outputDir, { recursive: true })
+    }
+
+    // Generate package.json if it doesn't exist
+    const pkgJsonPath = join(process.cwd(), 'package.json')
+    if (!existsSync(pkgJsonPath)) {
+      const pkgContent = renderTemplate('package.json', {
+        helper: answers.helper,
+        projectName: basename(process.cwd()),
+        typescript: answers.typescript,
+      })
+      writeFileSync(pkgJsonPath, pkgContent, 'utf8')
+      p.log.success(`Created ${chalk.green('package.json')}`)
+    } else {
+      p.log.info(`${chalk.dim('package.json already exists — skipping')}`)
+    }
+
+    // Install dependencies
+    const spinner = ora({ color: 'cyan', text: 'Installing dependencies…' }).start()
+    try {
+      await execa('npm', ['install'], {
+        cwd: process.cwd(),
+        env: { FORCE_COLOR: '1' },
+      })
+      spinner.succeed('Dependencies installed')
+    } catch {
+      spinner.fail('Failed to install dependencies — run `npm install` manually')
     }
 
     // Generate config file

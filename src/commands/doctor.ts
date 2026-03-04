@@ -2,12 +2,12 @@ import { Command, Flags } from '@oclif/core'
 import chalk from 'chalk'
 import Table from 'cli-table3'
 import figures from 'figures'
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 import { findConfig } from '../lib/config.js'
 import { createLogger } from '../lib/logger.js'
-import { getSystemInfo } from '../lib/system.js'
+import { getSystemInfo, resolvePackagePath } from '../lib/system.js'
 
 interface CheckResult {
   detail: string
@@ -47,11 +47,10 @@ export default class Doctor extends Command {
     // 2. CodeceptJS installed
     let codeceptVersion = 'not found'
     try {
-      const { resolvePackagePath } = await import('../lib/system.js')
       const ccjsPath = resolvePackagePath('codeceptjs')
       if (ccjsPath) {
-        const pkg = await import(join(ccjsPath, 'package.json'), { with: { type: 'json' } })
-        codeceptVersion = `v${pkg.default.version}`
+        const pkgJson = JSON.parse(readFileSync(join(ccjsPath, 'package.json'), 'utf8'))
+        codeceptVersion = `v${pkgJson.version}`
       }
     } catch {
       // Not found

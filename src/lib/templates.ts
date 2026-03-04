@@ -157,6 +157,51 @@ module.exports = {
 `
   },
 
+  'package.json'(data) {
+    const projectName = (data.projectName as string) || 'codeceptjs-project'
+    const helper = (data.helper as string) || 'Playwright'
+    const typescript = data.typescript as boolean
+
+    const helperPackages: Record<string, string> = {
+      Appium: 'appium',
+      Playwright: 'playwright',
+      Puppeteer: 'puppeteer',
+      TestCafe: 'testcafe',
+      WebDriver: 'webdriverio',
+    }
+
+    const deps: Record<string, string> = {
+      codeceptjs: '^3.6.0',
+    }
+
+    const helperPkg = helperPackages[helper]
+    if (helperPkg) {
+      deps[helperPkg] = 'latest'
+    }
+
+    const devDeps: Record<string, string> = {}
+    if (typescript) {
+      devDeps.typescript = '^5'
+    }
+
+    const pkg: Record<string, unknown> = {
+      name: projectName,
+      version: '0.0.1',
+      private: true,
+      scripts: {
+        'test': 'ccjs run',
+        'test:parallel': 'ccjs run workers --count 2',
+      },
+      dependencies: deps,
+    }
+
+    if (Object.keys(devDeps).length > 0) {
+      pkg.devDependencies = devDeps
+    }
+
+    return JSON.stringify(pkg, null, 2) + '\n'
+  },
+
   'steps.d'(data) {
     const helper = (data.helper as string) || 'Playwright'
     return `/// <reference types='codeceptjs' />

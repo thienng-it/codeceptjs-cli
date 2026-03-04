@@ -12,6 +12,7 @@ describe('templates', () => {
       expect(names).toContain('pageobject')
       expect(names).toContain('helper')
       expect(names).toContain('steps.d')
+      expect(names).toContain('package.json')
     })
   })
 
@@ -104,6 +105,35 @@ describe('templates', () => {
       const result = renderTemplate('steps.d', { helper: 'WebDriver' })
       expect(result).toContain('interface Methods extends WebDriver')
       expect(result).not.toContain('Playwright')
+    })
+
+    it('should render package.json template with Playwright (TS)', () => {
+      const result = renderTemplate('package.json', {
+        helper: 'Playwright',
+        projectName: 'my-test-project',
+        typescript: true,
+      })
+
+      const pkg = JSON.parse(result)
+      expect(pkg.name).toBe('my-test-project')
+      expect(pkg.dependencies.codeceptjs).toBe('^3.6.0')
+      expect(pkg.dependencies.playwright).toBe('latest')
+      expect(pkg.devDependencies.typescript).toBe('^5')
+      expect(pkg.scripts.test).toBe('ccjs run')
+    })
+
+    it('should render package.json template with WebDriver (JS)', () => {
+      const result = renderTemplate('package.json', {
+        helper: 'WebDriver',
+        projectName: 'wd-project',
+        typescript: false,
+      })
+
+      const pkg = JSON.parse(result)
+      expect(pkg.name).toBe('wd-project')
+      expect(pkg.dependencies.codeceptjs).toBe('^3.6.0')
+      expect(pkg.dependencies.webdriverio).toBe('latest')
+      expect(pkg.devDependencies).toBeUndefined()
     })
   })
 })
