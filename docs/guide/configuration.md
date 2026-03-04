@@ -8,7 +8,7 @@ Page objects encapsulate selectors and common actions for a page:
 
 ```typescript
 // pages/LoginPage.ts
-const { I } = inject();
+const { I } = inject()
 
 export = {
   fields: {
@@ -20,12 +20,12 @@ export = {
   },
 
   login(email: string, password: string) {
-    I.amOnPage('/login');
-    I.fillField(this.fields.email, email);
-    I.fillField(this.fields.password, password);
-    I.click(this.buttons.submit);
+    I.amOnPage('/login')
+    I.fillField(this.fields.email, email)
+    I.fillField(this.fields.password, password)
+    I.click(this.buttons.submit)
   },
-};
+}
 ```
 
 Register in `codecept.conf.ts`:
@@ -40,9 +40,9 @@ Use in tests:
 
 ```typescript
 Scenario('login via page object', ({ I, loginPage }) => {
-  loginPage.login('user@test.com', 'secret123');
-  I.see('Dashboard');
-});
+  loginPage.login('user@test.com', 'secret123')
+  I.see('Dashboard')
+})
 ```
 
 ---
@@ -53,7 +53,7 @@ Extend the `I` object with custom methods:
 
 ```typescript
 // helpers/ApiHelper.ts
-const Helper = require('@codeceptjs/helper');
+const Helper = require('@codeceptjs/helper')
 
 class ApiHelper extends Helper {
   async createUser(name: string, email: string) {
@@ -61,16 +61,16 @@ class ApiHelper extends Helper {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email }),
-    });
-    return response.json();
+    })
+    return response.json()
   }
 
   async cleanupTestData() {
-    await fetch('http://localhost:3000/api/test/cleanup', { method: 'DELETE' });
+    await fetch('http://localhost:3000/api/test/cleanup', { method: 'DELETE' })
   }
 }
 
-export = ApiHelper;
+export = ApiHelper
 ```
 
 Register in `codecept.conf.ts`:

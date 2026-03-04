@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "codeceptjs-cli"
-  text: "The Next-Gen Wrapper for CodeceptJS"
-  tagline: "A production-grade CLI for maximum developer productivity, extensibility, and CI/CD ergonomics."
+  name: 'codeceptjs-cli'
+  text: 'The Next-Gen Wrapper for CodeceptJS'
+  tagline: 'A production-grade CLI for maximum developer productivity, extensibility, and CI/CD ergonomics.'
   image:
     src: https://codecept.io/img/logo.svg
     alt: CodeceptJS Logo
@@ -34,10 +34,10 @@ features:
 
 ### The Problem It Solves
 
-| Raw CodeceptJS | With `ccjs` |
-|---|---|
-| Manually create `codecept.conf.js` | `ccjs init` → interactive wizard |
-| Hope your environment is correct | `ccjs doctor` → validates everything |
-| `npx codeceptjs run --steps` | `ccjs run --steps` (shorter, colorized) |
-| Figure out worker count yourself | `ccjs run workers` (auto-detects CPUs) |
-| `npx codeceptjs generate:test` | `ccjs generate test` (with prompts) |
+| Raw CodeceptJS                     | With `ccjs`                             |
+| ---------------------------------- | --------------------------------------- |
+| Manually create `codecept.conf.js` | `ccjs init` → interactive wizard        |
+| Hope your environment is correct   | `ccjs doctor` → validates everything    |
+| `npx codeceptjs run --steps`       | `ccjs run --steps` (shorter, colorized) |
+| Figure out worker count yourself   | `ccjs run workers` (auto-detects CPUs)  |
+| `npx codeceptjs generate:test`     | `ccjs generate test` (with prompts)     |

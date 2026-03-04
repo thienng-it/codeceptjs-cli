@@ -9,6 +9,7 @@ ccjs doctor
 ```
 
 It validates:
+
 - Node.js version (Requires 22+)
 - CodeceptJS module installation
 - Config file presence
@@ -16,6 +17,7 @@ It validates:
 - Output directory presence
 
 Example Output:
+
 ```text
 ┌───┬──────────────────┬─────────────────────┐
 │   │ Check            │ Status              │

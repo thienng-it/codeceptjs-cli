@@ -9,6 +9,7 @@ ccjs init
 ```
 
 The wizard walks you through:
+
 1. Selecting a helper (Playwright, WebDriver, Appium, etc.)
 2. Selecting target browsers (Chromium, Firefox, WebKit)
 3. Defining the application URL

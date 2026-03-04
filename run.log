@@ -1,0 +1,170 @@
+release	Set up job	﻿2026-03-04T15:14:07.6825592Z Current runner version: '2.331.0'
+release	Set up job	2026-03-04T15:14:07.6850515Z ##[group]Runner Image Provisioner
+release	Set up job	2026-03-04T15:14:07.6851420Z Hosted Compute Agent
+release	Set up job	2026-03-04T15:14:07.6852101Z Version: 20260213.493
+release	Set up job	2026-03-04T15:14:07.6852741Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+release	Set up job	2026-03-04T15:14:07.6853444Z Build Date: 2026-02-13T00:28:41Z
+release	Set up job	2026-03-04T15:14:07.6854049Z Worker ID: {038b1e48-3e23-43eb-9edc-dd166dd3c691}
+release	Set up job	2026-03-04T15:14:07.6854867Z Azure Region: westcentralus
+release	Set up job	2026-03-04T15:14:07.6855405Z ##[endgroup]
+release	Set up job	2026-03-04T15:14:07.6856735Z ##[group]Operating System
+release	Set up job	2026-03-04T15:14:07.6857442Z Ubuntu
+release	Set up job	2026-03-04T15:14:07.6857920Z 24.04.3
+release	Set up job	2026-03-04T15:14:07.6858390Z LTS
+release	Set up job	2026-03-04T15:14:07.6859088Z ##[endgroup]
+release	Set up job	2026-03-04T15:14:07.6859599Z ##[group]Runner Image
+release	Set up job	2026-03-04T15:14:07.6860233Z Image: ubuntu-24.04
+release	Set up job	2026-03-04T15:14:07.6860801Z Version: 20260224.36.1
+release	Set up job	2026-03-04T15:14:07.6861751Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260224.36/images/ubuntu/Ubuntu2404-Readme.md
+release	Set up job	2026-03-04T15:14:07.6863447Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260224.36
+release	Set up job	2026-03-04T15:14:07.6864348Z ##[endgroup]
+release	Set up job	2026-03-04T15:14:07.6865542Z ##[group]GITHUB_TOKEN Permissions
+release	Set up job	2026-03-04T15:14:07.6867382Z Contents: write
+release	Set up job	2026-03-04T15:14:07.6867926Z Issues: write
+release	Set up job	2026-03-04T15:14:07.6868779Z Metadata: read
+release	Set up job	2026-03-04T15:14:07.6869427Z PullRequests: write
+release	Set up job	2026-03-04T15:14:07.6869969Z ##[endgroup]
+release	Set up job	2026-03-04T15:14:07.6872162Z Secret source: Actions
+release	Set up job	2026-03-04T15:14:07.6872878Z Prepare workflow directory
+release	Set up job	2026-03-04T15:14:07.7209723Z Prepare all required actions
+release	Set up job	2026-03-04T15:14:07.7247564Z Getting action download info
+release	Set up job	2026-03-04T15:14:08.1576600Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+release	Set up job	2026-03-04T15:14:08.3073396Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+release	Set up job	2026-03-04T15:14:08.5024937Z Complete job name: release
+release	Run actions/checkout@v4	﻿2026-03-04T15:14:08.5746467Z ##[group]Run actions/checkout@v4
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5747313Z with:
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5747698Z   fetch-depth: 0
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5748114Z   repository: thienng-it/codeceptjs-cli
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5748979Z   token: ***
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5749360Z   ssh-strict: true
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5749734Z   ssh-user: git
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5750122Z   persist-credentials: true
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5750548Z   clean: true
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5750934Z   sparse-checkout-cone-mode: true
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5751387Z   fetch-tags: false
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5751776Z   show-progress: true
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5752160Z   lfs: false
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5752516Z   submodules: false
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5752899Z   set-safe-directory: true
+release	Run actions/checkout@v4	2026-03-04T15:14:08.5753558Z ##[endgroup]
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6834210Z Syncing repository: thienng-it/codeceptjs-cli
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6835938Z ##[group]Getting Git version info
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6836697Z Working directory is '/home/runner/work/codeceptjs-cli/codeceptjs-cli'
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6837726Z [command]/usr/bin/git version
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6916122Z git version 2.53.0
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6942471Z ##[endgroup]
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6964653Z Temporarily overriding HOME='/home/runner/work/_temp/b009b6a1-fabe-4046-aab4-4b1144c2135f' before making global git config changes
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6966074Z Adding repository directory to the temporary git global config as a safe directory
+release	Run actions/checkout@v4	2026-03-04T15:14:08.6970019Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/codeceptjs-cli/codeceptjs-cli
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7009358Z Deleting the contents of '/home/runner/work/codeceptjs-cli/codeceptjs-cli'
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7012999Z ##[group]Initializing the repository
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7017081Z [command]/usr/bin/git init /home/runner/work/codeceptjs-cli/codeceptjs-cli
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7123122Z hint: Using 'master' as the name for the initial branch. This default branch name
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7124323Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7125562Z hint: to use in all of your new repositories, which will suppress this warning,
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7126564Z hint: call:
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7127433Z hint:
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7128055Z hint: 	git config --global init.defaultBranch <name>
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7128921Z hint:
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7129500Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7130424Z hint: 'development'. The just-created branch can be renamed via this command:
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7131151Z hint:
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7131528Z hint: 	git branch -m <name>
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7132046Z hint:
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7132814Z hint: Disable this message with "git config set advice.defaultBranchName false"
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7133912Z Initialized empty Git repository in /home/runner/work/codeceptjs-cli/codeceptjs-cli/.git/
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7139138Z [command]/usr/bin/git remote add origin https://github.com/thienng-it/codeceptjs-cli
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7173452Z ##[endgroup]
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7174188Z ##[group]Disabling automatic garbage collection
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7177992Z [command]/usr/bin/git config --local gc.auto 0
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7207076Z ##[endgroup]
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7207739Z ##[group]Setting up auth
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7214864Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7246197Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7603406Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7637673Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7898986Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+release	Run actions/checkout@v4	2026-03-04T15:14:08.7948011Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+release	Run actions/checkout@v4	2026-03-04T15:14:08.8210927Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+release	Run actions/checkout@v4	2026-03-04T15:14:08.8249921Z ##[endgroup]
+release	Run actions/checkout@v4	2026-03-04T15:14:08.8251199Z ##[group]Fetching the repository
+release	Run actions/checkout@v4	2026-03-04T15:14:08.8259851Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4601760Z From https://github.com/thienng-it/codeceptjs-cli
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4603364Z  * [new branch]      main       -> origin/main
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4646561Z [command]/usr/bin/git branch --list --remote origin/main
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4673019Z   origin/main
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4683825Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4710076Z ae421fe7a81fac3e9f97e5a95fd9884308782a0b
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4716005Z ##[endgroup]
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4717422Z ##[group]Determining the checkout info
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4719389Z ##[endgroup]
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4722212Z [command]/usr/bin/git sparse-checkout disable
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4761710Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4792326Z ##[group]Checking out the ref
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4796991Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4908195Z Switched to a new branch 'main'
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4911512Z branch 'main' set up to track 'origin/main'.
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4917709Z ##[endgroup]
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4958475Z [command]/usr/bin/git log -1 --format=%H
+release	Run actions/checkout@v4	2026-03-04T15:14:09.4983537Z ae421fe7a81fac3e9f97e5a95fd9884308782a0b
+release	Run actions/setup-node@v4	﻿2026-03-04T15:14:09.5261606Z ##[group]Run actions/setup-node@v4
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.5262371Z with:
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.5262781Z   node-version: 22
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.5263256Z   cache: npm
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.5263953Z   always-auth: false
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.5264476Z   check-latest: false
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.5265248Z   token: ***
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.5265678Z ##[endgroup]
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.7076434Z Found in cache @ /opt/hostedtoolcache/node/22.22.0/x64
+release	Run actions/setup-node@v4	2026-03-04T15:14:09.7084023Z ##[group]Environment details
+release	Run actions/setup-node@v4	2026-03-04T15:14:10.0701027Z node: v22.22.0
+release	Run actions/setup-node@v4	2026-03-04T15:14:10.0702326Z npm: 10.9.4
+release	Run actions/setup-node@v4	2026-03-04T15:14:10.0703247Z yarn: 1.22.22
+release	Run actions/setup-node@v4	2026-03-04T15:14:10.0705544Z ##[endgroup]
+release	Run actions/setup-node@v4	2026-03-04T15:14:10.0726605Z [command]/opt/hostedtoolcache/node/22.22.0/x64/bin/npm config get cache
+release	Run actions/setup-node@v4	2026-03-04T15:14:10.1833349Z /home/runner/.npm
+release	Run actions/setup-node@v4	2026-03-04T15:14:10.4036753Z npm cache is not found
+release	Run npm ci	﻿2026-03-04T15:14:10.4181467Z ##[group]Run npm ci
+release	Run npm ci	2026-03-04T15:14:10.4181827Z [36;1mnpm ci[0m
+release	Run npm ci	2026-03-04T15:14:10.4245216Z shell: /usr/bin/bash -e {0}
+release	Run npm ci	2026-03-04T15:14:10.4245537Z ##[endgroup]
+release	Run npm ci	2026-03-04T15:14:11.7057803Z npm error code EUSAGE
+release	Run npm ci	2026-03-04T15:14:11.7060588Z npm error
+release	Run npm ci	2026-03-04T15:14:11.7061666Z npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+release	Run npm ci	2026-03-04T15:14:11.7062503Z npm error
+release	Run npm ci	2026-03-04T15:14:11.7062870Z npm error Missing: change-case@5.4.4 from lock file
+release	Run npm ci	2026-03-04T15:14:11.7063177Z npm error
+release	Run npm ci	2026-03-04T15:14:11.7063424Z npm error Clean install a project
+release	Run npm ci	2026-03-04T15:14:11.7063679Z npm error
+release	Run npm ci	2026-03-04T15:14:11.7063860Z npm error Usage:
+release	Run npm ci	2026-03-04T15:14:11.7064048Z npm error npm ci
+release	Run npm ci	2026-03-04T15:14:11.7064234Z npm error
+release	Run npm ci	2026-03-04T15:14:11.7064438Z npm error Options:
+release	Run npm ci	2026-03-04T15:14:11.7064888Z npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+release	Run npm ci	2026-03-04T15:14:11.7065601Z npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+release	Run npm ci	2026-03-04T15:14:11.7066258Z npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+release	Run npm ci	2026-03-04T15:14:11.7066916Z npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+release	Run npm ci	2026-03-04T15:14:11.7067414Z npm error [--no-bin-links] [--no-fund] [--dry-run]
+release	Run npm ci	2026-03-04T15:14:11.7067923Z npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+release	Run npm ci	2026-03-04T15:14:11.7068498Z npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+release	Run npm ci	2026-03-04T15:14:11.7069021Z npm error
+release	Run npm ci	2026-03-04T15:14:11.7069380Z npm error aliases: clean-install, ic, install-clean, isntall-clean
+release	Run npm ci	2026-03-04T15:14:11.7069709Z npm error
+release	Run npm ci	2026-03-04T15:14:11.7069956Z npm error Run "npm help ci" for more info
+release	Run npm ci	2026-03-04T15:14:11.7070573Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-03-04T15_14_10_482Z-debug-0.log
+release	Run npm ci	2026-03-04T15:14:11.7496485Z ##[error]Process completed with exit code 1.
+release	Post Run actions/checkout@v4	﻿2026-03-04T15:14:11.7704001Z Post job cleanup.
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.8680412Z [command]/usr/bin/git version
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.8718795Z git version 2.53.0
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.8765952Z Temporarily overriding HOME='/home/runner/work/_temp/887b9342-151b-4120-88cd-f13c00cc9df4' before making global git config changes
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.8767626Z Adding repository directory to the temporary git global config as a safe directory
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.8781023Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/codeceptjs-cli/codeceptjs-cli
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.8818245Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.8853141Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.9098333Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.9120704Z http.https://github.com/.extraheader
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.9134499Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.9167575Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.9398496Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+release	Post Run actions/checkout@v4	2026-03-04T15:14:11.9430563Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+release	Complete job	﻿2026-03-04T15:14:11.9774265Z Cleaning up orphan processes

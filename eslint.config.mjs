@@ -7,8 +7,8 @@ import { fileURLToPath } from 'node:url'
 const gitignorePath = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '.gitignore')
 
 export default [
-    includeIgnoreFile(gitignorePath),
-    { ignores: ['docs/.vitepress/**', 'docs/.vitepress/dist/**', 'tsup.config.ts'] },
-    ...oclif,
-    prettier
+  includeIgnoreFile(gitignorePath),
+  { ignores: ['docs/.vitepress/**', 'docs/.vitepress/dist/**', 'tsup.config.ts'] },
+  ...oclif,
+  prettier,
 ]

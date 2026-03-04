@@ -6,30 +6,25 @@ export type HelperName = 'Appium' | 'Playwright' | 'Puppeteer' | 'TestCafe' | 'W
 
 export type BrowserName = 'chromium' | 'firefox' | 'webkit'
 
-export type PluginName =
-    | 'allure'
-    | 'autoLogin'
-    | 'retryFailedStep'
-    | 'screenshotOnFail'
-    | 'tryTo'
+export type PluginName = 'allure' | 'autoLogin' | 'retryFailedStep' | 'screenshotOnFail' | 'tryTo'
 
 export interface HelperConfig {
-    [key: string]: unknown
-    browser?: string
-    show?: boolean
-    url: string
+  [key: string]: unknown
+  browser?: string
+  show?: boolean
+  url: string
 }
 
 export interface PluginConfig {
-    [key: string]: unknown
-    enabled: boolean
+  [key: string]: unknown
+  enabled: boolean
 }
 
 export interface CodeceptConfig {
-    helpers: Record<HelperName, HelperConfig>
-    include: Record<string, string>
-    name: string
-    output: string
-    plugins: Record<string, PluginConfig>
-    tests: string
+  helpers: Record<HelperName, HelperConfig>
+  include: Record<string, string>
+  name: string
+  output: string
+  plugins: Record<string, PluginConfig>
+  tests: string
 }

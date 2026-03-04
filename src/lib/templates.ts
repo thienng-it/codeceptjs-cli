@@ -18,24 +18,25 @@ const templates: Record<string, TemplateFn> = {
     const url = data.url as string
     const ext = data.ext as string
 
-    const helperConfig = helper === 'Playwright'
-      ? `    Playwright: {
+    const helperConfig =
+      helper === 'Playwright'
+        ? `    Playwright: {
       browser: '${browsers[0] ?? 'chromium'}',
       url: '${url}',
       show: !process.env.CI,
       waitForNavigation: 'networkidle0',
     }`
-      : helper === 'WebDriver'
-        ? `    WebDriver: {
+        : helper === 'WebDriver'
+          ? `    WebDriver: {
       url: '${url}',
       browser: 'chrome',
     }`
-        : helper === 'Puppeteer'
-          ? `    Puppeteer: {
+          : helper === 'Puppeteer'
+            ? `    Puppeteer: {
       url: '${url}',
       show: !process.env.CI,
     }`
-          : `    ${helper}: {
+            : `    ${helper}: {
       url: '${url}',
     }`
 
@@ -66,7 +67,7 @@ Scenario('test welcome page', ({ I }) => {
 `
   },
 
-  'helper'(data) {
+  helper(data) {
     const helperName = data.helperName as string
     const ts = data.typescript as boolean
 
@@ -107,7 +108,7 @@ module.exports = ${helperName};
 `
   },
 
-  'pageobject'(data) {
+  pageobject(data) {
     const ts = data.typescript as boolean
 
     if (ts) {
@@ -174,7 +175,7 @@ declare namespace CodeceptJS {
 `
   },
 
-  'test'(data) {
+  test(data) {
     const featureName = data.featureName as string
     const testName = data.testName as string
 

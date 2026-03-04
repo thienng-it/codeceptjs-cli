@@ -19,8 +19,8 @@ rerun: {
 
 ## Common Strategies
 
-| Use Case | Configuration |
-|---|---|
-| Find flaky tests | `minSuccess: 1, maxReruns: 5` |
-| Confirm stability | `minSuccess: 3, maxReruns: 5` |
+| Use Case             | Configuration                   |
+| -------------------- | ------------------------------- |
+| Find flaky tests     | `minSuccess: 1, maxReruns: 5`   |
+| Confirm stability    | `minSuccess: 3, maxReruns: 5`   |
 | Full stability audit | `minSuccess: 10, maxReruns: 10` |

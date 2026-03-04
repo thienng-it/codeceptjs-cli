@@ -2,11 +2,11 @@
 
 ## Prerequisites
 
-| Requirement | Version |
-|---|---|
-| Node.js | ≥ 22 |
-| npm | ≥ 10 |
-| codeceptjs | ≥ 3.6 (peer dependency) |
+| Requirement | Version                 |
+| ----------- | ----------------------- |
+| Node.js     | ≥ 22                    |
+| npm         | ≥ 10                    |
+| codeceptjs  | ≥ 3.6 (peer dependency) |
 
 Install CodeceptJS and a browser engine in your project:
 
@@ -56,12 +56,12 @@ ccjs init --yes --helper Playwright --test-dir ./e2e
 
 **Generated files:**
 
-| File | Purpose |
-|---|---|
-| `codecept.conf.ts` | Test framework configuration |
-| `tests/first.test.ts` | Starter test |
-| `steps.d.ts` | TypeScript autocompletion for the `I` object |
-| `output/` | Directory for screenshots and reports |
+| File                  | Purpose                                      |
+| --------------------- | -------------------------------------------- |
+| `codecept.conf.ts`    | Test framework configuration                 |
+| `tests/first.test.ts` | Starter test                                 |
+| `steps.d.ts`          | TypeScript autocompletion for the `I` object |
+| `output/`             | Directory for screenshots and reports        |
 
 ## 2. Verify Environment
 
@@ -86,17 +86,17 @@ ccjs doctor
 ## 3. Write Tests
 
 ```typescript
-Feature('Feature Name');
+Feature('Feature Name')
 
 Scenario('test description', ({ I }) => {
-  I.amOnPage('/');
-  I.see('Welcome');
-  I.click('Sign In');
-  I.fillField('Email', 'user@example.com');
-  I.fillField('Password', 'secret123');
-  I.click('Submit');
-  I.seeInCurrentUrl('/dashboard');
-});
+  I.amOnPage('/')
+  I.see('Welcome')
+  I.click('Sign In')
+  I.fillField('Email', 'user@example.com')
+  I.fillField('Password', 'secret123')
+  I.click('Submit')
+  I.seeInCurrentUrl('/dashboard')
+})
 ```
 
 See the [Commands](/commands/init) section for more tools!

@@ -3,10 +3,10 @@ import { join, resolve } from 'node:path'
 
 /** Config file names in order of priority */
 const CONFIG_FILES = [
-    'codecept.conf.ts',
-    'codecept.conf.js',
-    'codecept.conf.mjs',
-    'codecept.conf.cjs',
+  'codecept.conf.ts',
+  'codecept.conf.js',
+  'codecept.conf.mjs',
+  'codecept.conf.cjs',
 ] as const
 
 /**
@@ -14,16 +14,16 @@ const CONFIG_FILES = [
  * Returns the absolute path to the first config found, or undefined.
  */
 export function findConfig(dir?: string): string | undefined {
-    const searchDir = dir ?? process.cwd()
+  const searchDir = dir ?? process.cwd()
 
-    for (const file of CONFIG_FILES) {
-        const fullPath = resolve(join(searchDir, file))
-        if (existsSync(fullPath)) {
-            return fullPath
-        }
+  for (const file of CONFIG_FILES) {
+    const fullPath = resolve(join(searchDir, file))
+    if (existsSync(fullPath)) {
+      return fullPath
     }
+  }
 
-    return undefined
+  return undefined
 }
 
 /**
@@ -31,5 +31,5 @@ export function findConfig(dir?: string): string | undefined {
  * Useful for validation without executing the config.
  */
 export function loadRawConfig(configPath: string): string {
-    return readFileSync(configPath, 'utf8')
+  return readFileSync(configPath, 'utf8')
 }

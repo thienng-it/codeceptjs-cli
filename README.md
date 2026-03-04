@@ -38,17 +38,17 @@ ccjs run
 
 ## Available Commands
 
-| Command | Description |
-|---|---|
-| `ccjs init` | Interactive project setup |
-| `ccjs doctor` | Validate environment health |
-| `ccjs run` | Execute tests |
-| `ccjs run workers` | Run tests in parallel |
-| `ccjs run rerun` | Flaky test detection |
-| `ccjs dry-run` | Preview tests without executing |
-| `ccjs generate` | Scaffold tests, page objects, etc. |
+| Command            | Description                        |
+| ------------------ | ---------------------------------- |
+| `ccjs init`        | Interactive project setup          |
+| `ccjs doctor`      | Validate environment health        |
+| `ccjs run`         | Execute tests                      |
+| `ccjs run workers` | Run tests in parallel              |
+| `ccjs run rerun`   | Flaky test detection               |
+| `ccjs dry-run`     | Preview tests without executing    |
+| `ccjs generate`    | Scaffold tests, page objects, etc. |
 
-*See the [Full Command Reference](https://thienng-it.github.io/codeceptjs-cli/commands/init) for detailed usage.*
+_See the [Full Command Reference](https://thienng-it.github.io/codeceptjs-cli/commands/init) for detailed usage._
 
 ---
 
