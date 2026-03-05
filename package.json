@@ -1,10 +1,10 @@
 {
-  "name": "codeceptjs-cli",
+  "name": "@josephnguyent/codeceptjs-cli",
   "description": "Next-generation production-grade CLI for the CodeceptJS testing framework",
   "version": "0.1.3",
   "author": "thienng-it",
   "bin": {
-    "ccjs": "./bin/run.js"
+    "ccjs": "bin/run.js"
   },
   "bugs": "https://github.com/thienng-it/codeceptjs-cli/issues",
   "dependencies": {
@@ -93,7 +93,10 @@
       }
     }
   },
-  "repository": "thienng-it/codeceptjs-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thienng-it/codeceptjs-cli.git"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "bin/dev.js",

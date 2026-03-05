@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: codeceptjs-cli
+  name: "@josephnguyent/codeceptjs-cli"
   text: The Next-Gen CLI for CodeceptJS
   tagline: A production-grade command-line tool for maximum developer productivity, extensibility, and CI/CD ergonomics.
   image:
     src: /logo.svg
-    alt: codeceptjs-cli Logo
+    alt: "@josephnguyent/codeceptjs-cli Logo"
   actions:
     - theme: brand
       text: Get Started →
@@ -52,9 +52,9 @@ features:
 
 <div class="vp-doc" style="max-width: 688px; margin: 2rem auto; padding: 0 24px;">
 
-## Why codeceptjs-cli?
+## Why @josephnguyent/codeceptjs-cli?
 
-**codeceptjs-cli** (`ccjs`) provides a **better command-line experience** for CodeceptJS — similar to how `create-react-app` wraps Webpack to make React projects easier.
+**@josephnguyent/codeceptjs-cli** (`ccjs`) provides a **better command-line experience** for CodeceptJS — similar to how `create-react-app` wraps Webpack to make React projects easier.
 
 ### The Problem It Solves
 
@@ -70,10 +70,10 @@ features:
 
 ```bash
 # Install globally
-npm install -g codeceptjs-cli
+npm install -g @josephnguyent/codeceptjs-cli
 
 # Or use npx
-npx codeceptjs-cli init
+npx @josephnguyent/codeceptjs-cli init
 ```
 
 ### Quick Start
@@ -93,7 +93,7 @@ ccjs run --steps
 
 This CLI is built on top of the amazing [CodeceptJS](https://codecept.io/) testing framework created and maintained by the [CodeceptJS team](https://github.com/codeceptjs/CodeceptJS). All credit for the core testing engine, helpers, and plugin ecosystem belongs to them.
 
-`codeceptjs-cli` is a **community-driven open-source wrapper** — it is **not** officially affiliated with or endorsed by the CodeceptJS project. We simply love CodeceptJS and want to make the developer experience even better.
+`@josephnguyent/codeceptjs-cli` is a **community-driven open-source wrapper** — it is **not** officially affiliated with or endorsed by the CodeceptJS project. We simply love CodeceptJS and want to make the developer experience even better.
 
 - 🌐 [CodeceptJS Official Site](https://codecept.io/)
 - 📖 [CodeceptJS Documentation](https://codecept.io/basics/)

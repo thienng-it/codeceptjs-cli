@@ -1,4 +1,4 @@
-# Contributing to codeceptjs-cli
+# Contributing to @josephnguyent/codeceptjs-cli
 
 First off, **thank you** for considering contributing! This project is free and open source, and we welcome contributions from everyone.
 

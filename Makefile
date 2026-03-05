@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────────────────────
-# codeceptjs-cli — Makefile
+# @josephnguyent/codeceptjs-cli — Makefile
 # ─────────────────────────────────────────────────────────────
 
 .PHONY: help install build clean dev lint format typecheck test test-watch test-coverage ci doctor
@@ -7,7 +7,7 @@
 # Default target
 help: ## Show this help
 	@echo ""
-	@echo "  codeceptjs-cli — available commands"
+	@echo "  @josephnguyent/codeceptjs-cli — available commands"
 	@echo "  ───────────────────────────────────"
 	@echo ""
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \

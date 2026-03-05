@@ -1,4 +1,4 @@
-# codeceptjs-cli
+# @josephnguyent/codeceptjs-cli
 
 > Next-generation, production-grade CLI wrapper for the [CodeceptJS](https://codecept.io/) testing framework.
 
@@ -27,7 +27,7 @@
 
 ```bash
 # Install globally
-npm install -g codeceptjs-cli
+npm install -g @josephnguyent/codeceptjs-cli
 
 # Initialize a new project
 ccjs init
@@ -88,7 +88,7 @@ User types: ccjs run --steps
 
 This project is built on top of the incredible [**CodeceptJS**](https://codecept.io/) testing framework. All credit for the core testing engine, helpers, and plugin ecosystem belongs to the [CodeceptJS team](https://github.com/codeceptjs/CodeceptJS).
 
-`codeceptjs-cli` is a **community-driven open-source tool** — it is **not** officially affiliated with or endorsed by the CodeceptJS project. We simply love CodeceptJS and want to make the developer experience even better.
+`@josephnguyent/codeceptjs-cli` is a **community-driven open-source tool** — it is **not** officially affiliated with or endorsed by the CodeceptJS project. We simply love CodeceptJS and want to make the developer experience even better.
 
 - 🌐 [CodeceptJS Official Site](https://codecept.io/)
 - 📖 [CodeceptJS Documentation](https://codecept.io/basics/)

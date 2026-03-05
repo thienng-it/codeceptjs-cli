@@ -1,6 +1,6 @@
 # Getting Started
 
-Get up and running with `codeceptjs-cli` in under 5 minutes.
+Get up and running with `@josephnguyent/codeceptjs-cli` in under 5 minutes.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Run `ccjs doctor` at any time to verify all prerequisites are met.
 
 ```bash
 # Install the CLI globally
-npm install -g codeceptjs-cli
+npm install -g @josephnguyent/codeceptjs-cli
 
 # Verify installation
 ccjs --version
@@ -27,7 +27,7 @@ ccjs --version
 Or use it without installing via `npx`:
 
 ```bash
-npx codeceptjs-cli --help
+npx @josephnguyent/codeceptjs-cli --help
 ```
 
 ## Step 1 — Initialize a Project
@@ -131,5 +131,5 @@ ccjs run workers
 - [CodeceptJS Documentation](https://codecept.io/basics/) — Learn the full power of the testing framework
 
 ::: info About this project
-`codeceptjs-cli` is a free, open-source community tool built on top of [CodeceptJS](https://codecept.io/). It is not officially affiliated with the CodeceptJS team — all credit for the core framework belongs to them. Contributions are welcome!
+`@josephnguyent/codeceptjs-cli` is a free, open-source community tool built on top of [CodeceptJS](https://codecept.io/). It is not officially affiliated with the CodeceptJS team — all credit for the core framework belongs to them. Contributions are welcome!
 :::

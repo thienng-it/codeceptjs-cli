@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'codeceptjs-cli',
+  title: '@josephnguyent/codeceptjs-cli',
   description: 'A production-grade CLI wrapper for the CodeceptJS testing framework.',
 
   // CRITICAL: base must match the GitHub Pages subpath
@@ -13,7 +13,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/codeceptjs-cli/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#7c3aed' }],
-    ['meta', { property: 'og:title', content: 'codeceptjs-cli' }],
+    ['meta', { property: 'og:title', content: '@josephnguyent/codeceptjs-cli' }],
     ['meta', { property: 'og:description', content: 'The next-gen production-grade CLI for CodeceptJS' }],
     ['meta', { property: 'og:type', content: 'website' }],
   ],
@@ -21,7 +21,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
 
-    siteTitle: 'codeceptjs-cli',
+    siteTitle: '@josephnguyent/codeceptjs-cli',
 
     search: {
       provider: 'local',
@@ -97,7 +97,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/thienng-it/codeceptjs-cli' },
-      { icon: 'npm', link: 'https://www.npmjs.com/package/codeceptjs-cli' },
+      { icon: 'npm', link: 'https://www.npmjs.com/package/@josephnguyent/codeceptjs-cli' },
     ],
 
     footer: {
